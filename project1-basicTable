@@ -2,9 +2,10 @@
 -- 	data TYPE
 -- );
 CREATE TABLE friends (
-	id INTEGER,
-  name TEXT,
-  birthday DATE 
+  id INTEGER PRIMARY KEY,                   --PRIMARY KEY constraint (unique value for identity)
+  name TEXT UNIQUE,                         --UNIQUE constraint (unique but other cols can share val)
+  birthday DATE NOT NULL,                   --NOT NULL constraint (requires value)
+  death TEXT DEFAULT 'Not Applicable'       --DEFAULT contraint (fills in data if nothing given)
 );
 
 -- INSERT INTO for adding data
